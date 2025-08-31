@@ -18,7 +18,6 @@ function getCompChoice() {
   }
 }
 
-//Rock as default answer if invalid is entered
 function getHumanChoice() {
   let human = prompt("Play rock, paper, or scissors!");
   switch (human.toLowerCase()) {
