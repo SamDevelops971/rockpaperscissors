@@ -57,11 +57,7 @@ function playRound() {
   }
 }
 
-playRound();
-playRound();
-playRound();
-playRound();
-playRound();
+
 
 console.log("Results");
 console.log(`Wins: ${humanWins}`);
