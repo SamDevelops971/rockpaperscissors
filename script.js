@@ -7,9 +7,6 @@ let scoreboard = document.getElementById("score");
 let result = document.getElementById("winMessage");
 
 
-let humanChoice = "";
-
-
 
 function getCompChoice() {
   let robot = Math.floor(Math.random() * 3);
@@ -23,12 +20,8 @@ function getCompChoice() {
   }
 }
 
-
-
-//Rock as default answer if invalid is entered
-function rockChoice() {
+function rockChoice() P
   playRound("Rock");
-}
 
 function paperChoice() {
   playRound("Paper");
