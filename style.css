@@ -1,0 +1,98 @@
+body {
+  background: darkslategray;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: white
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.scoreboard {
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: flex;
+    font-size: 24px;
+    border: solid black 4px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 75px;
+   
+}
+
+.result {
+    display: flex;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.choices {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+   width: 350px;
+   height: 100px;
+   max-width: 350px;
+   max-height: 100px;
+
+}
+
+#rock {
+    display: block;
+    background-color: darkslategray;
+    border: solid white 2px;
+    border-radius: 50%;
+    width: 100%;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+#paper {
+    display: block;
+    width: 100%;
+    background-color: darkslategray;
+    font-size: 75px;
+    border-radius: 50%;
+    margin: 12px;
+    border: solid white 2px;
+    cursor: pointer;
+   
+}
+#scissors {
+    display: block;
+    width: 100%;
+    background-color: darkslategray;
+    border-radius: 50%;
+    font-size: 75px;
+    border: solid white 2px;
+    cursor: pointer;
+}
+
+#below {
+    display: flex;
+    margin: 16px;
+   justify-self: center;
+   align-self: center;
+     font-family: "Lucida Console", "Courier New", monospace;
+}
+
+

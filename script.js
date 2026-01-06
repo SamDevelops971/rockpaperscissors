@@ -1,67 +1,66 @@
 console.log("Hello World");
 
-let humanScore = 0;
-let computerScore = 0;
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissors = document.getElementById("scissors");
+let scoreboard = document.getElementById("score");
+let result = document.getElementById("winMessage");
+
+
 
 function getCompChoice() {
   let robot = Math.floor(Math.random() * 3);
   switch (robot) {
     case 0:
-      return "rock";
-      break;
+      return "Rock";
     case 1:
-      return "paper";
-      break;
+      return "Paper";
     case 2:
-      return "scissors";
-      break;
+      return "Scissors";
   }
 }
 
-function getHumanChoice() {
-  let human = prompt("Play rock, paper, or scissors!");
-  switch (human.toLowerCase()) {
-    case "rock":
-      return "rock";
-    case "paper":
-      return "paper";
-    case "scissors":
-      return "scissors";
-  }
+function rockChoice() P
+  playRound("Rock");
+
+function paperChoice() {
+  playRound("Paper");
 }
+
+function scissorsChoice() {
+  playRound("Scissors");
+}
+
 
 let humanWins = 0;
 let robotWins = 0;
 
-function playRound() {
-  let humanChoice = getHumanChoice();
+function playRound(humanChoice) {
   let robotChoice = getCompChoice();
 
   if (
-    (humanChoice == "rock" && robotChoice == "scissors") ||
-    (humanChoice == "scissors" && robotChoice == "paper") ||
-    (humanChoice == "paper" && robotChoice == "rock")
+    (humanChoice == "Rock" && robotChoice == "Scissors") ||
+    (humanChoice == "Scissors" && robotChoice == "Paper") ||
+    (humanChoice == "Paper" && robotChoice == "Rock")
   ) {
-    console.log(`You win! ${humanChoice} beats ${robotChoice}!`);
+    result.innerHTML = `${humanChoice} beats ${robotChoice}! You Win!`;
     humanWins++;
+    scoreboard.innerHTML = `${humanWins} : ${robotWins}`;
   } else if (
-    (robotChoice == "rock" && humanChoice == "scissors") ||
-    (robotChoice == "scissors" && humanChoice == "paper") ||
-    (robotChoice == "paper" && humanChoice == "rock")
+    (robotChoice == "Rock" && humanChoice == "Scissors") ||
+    (robotChoice == "Scissors" && humanChoice == "Paper") ||
+    (robotChoice == "Paper" && humanChoice == "Rock")
   ) {
-    console.log(`You lose! ${robotChoice} beats ${humanChoice}!`);
+    result.innerHTML = `${robotChoice} beats ${humanChoice}! You lose...`;
     robotWins++;
+    scoreboard.innerHTML = `${humanWins} : ${robotWins}`;
   } else {
-    console.log("It's a tie!");
+    result.innerHTML = "It's a tie!"
   }
 }
 
-playRound();
-playRound();
-playRound();
-playRound();
-playRound();
+rock.addEventListener("click", rockChoice);
+paper.addEventListener("click", paperChoice);
+scissors.addEventListener("click", scissorsChoice);
 
-console.log("Results");
-console.log(`Wins: ${humanWins}`);
-console.log(`Losses: ${robotWins}`);
+
